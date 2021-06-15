@@ -1,9 +1,13 @@
 import { ButtonHTMLAttributes } from 'react';
 
-function Button({
-  ...rest
-}: ButtonHTMLAttributes<HTMLButtonElement>): JSX.Element {
-  return <button type="button" {...rest} />;
+import { Container } from './styles';
+
+interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
+  gradient?: boolean;
+}
+
+function Button({ gradient = false, ...rest }: ButtonProps): JSX.Element {
+  return <Container gradient={gradient} type="button" {...rest} />;
 }
 
 export default Button;
