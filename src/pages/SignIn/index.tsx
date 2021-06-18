@@ -10,6 +10,7 @@ function SignIn(): JSX.Element {
   const [password, setPassword] = useState('');
 
   function handleSubmit(): void {
+    // eslint-disable-next-line no-console
     console.log({ email, password });
   }
 
